@@ -11,6 +11,7 @@
     <form>
         <label for="roast-selection"></label>
         <select id="roast-selection">
+            <option>All</option>
             <option>light</option>
             <option>medium</option>
             <option>dark</option>
@@ -20,7 +21,19 @@
     </form>
 
 
-        <div id="coffees"></div>
+        <div id="coffees"></div> <!-- style="display: none" to make disappear but issue-->
+    <h1>Add Coffee</h1>
+    <form>
+        <label for="roast-select"></label>
+        <select id="roast-select">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input type="text" id="addCoffeeName">
+        <input id="additional" type="submit" />
+
+    </form> <!-- adding coffee menu -->
 
 
     <script src="main.js"></script>

@@ -26,7 +26,6 @@ function updateCoffees(e) {
             filteredCoffees.push(coffee);
         }
     });
-
     var selectedCoffee = coffeeName.value;
     var filteredNames = [];
     coffees.forEach(function (coffee) {
@@ -36,8 +35,6 @@ function updateCoffees(e) {
     })
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
-
-
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -64,4 +61,5 @@ var roastSelection = document.querySelector('#roast-selection');
 var coffeeName = document.querySelector('#coffeeName');
 tbody.innerHTML = renderCoffees(coffees);
 
+tbody.addEventListener("", )// form, HTML element content display management,
 submitButton.addEventListener('click', updateCoffees);
