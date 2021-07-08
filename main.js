@@ -19,7 +19,7 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
+    var selectedRoast = roastSelection.value;// assigns our list to selectedRoast variable
     var selectedCoffee = coffeeName.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
@@ -57,11 +57,11 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-var coffeeName = document.querySelector('#coffeeName');
+var tbody = document.querySelector('#coffees');// grabs info of all our coffees and assigns to tbody
+var submitButton = document.querySelector('#submit');// the submit button
+var roastSelection = document.querySelector('#roast-selection'); //our ul list
+var coffeeName = document.querySelector('#coffeeName');// input box to manually enter coffee names
 tbody.innerHTML = renderCoffees(coffees);
 
 // tbody.addEventListener("", )// form, HTML element content display management,
-submitButton.addEventListener('click', updateCoffees);
+submitButton.addEventListener('click', updateCoffees);// updates coffee search when clicked on
