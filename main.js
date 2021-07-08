@@ -19,12 +19,14 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;// assigns our list to selectedRoast variable
-    var selectedCoffee = coffeeName.value;
+
+    var selectedRoast = roastSelection.value;
+    var selectedCoffee = coffeeName.value.toLowerCase();
+
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast &&
-            coffee.name.toLowerCase().includes(coffees) === selectedCoffee.toLowerCase().includes(coffees)) {//.includes()
+            coffee.name.toLowerCase().includes(selectedCoffee)) {//.includes()
             filteredCoffees.push(coffee);
         }
     });
@@ -63,5 +65,11 @@ var roastSelection = document.querySelector('#roast-selection'); //our ul list
 var coffeeName = document.querySelector('#coffeeName');// input box to manually enter coffee names
 tbody.innerHTML = renderCoffees(coffees);
 
+<<<<<<< HEAD
 // tbody.addEventListener("", )// form, HTML element content display management,
 submitButton.addEventListener('click', updateCoffees);// updates coffee search when clicked on
+=======
+submitButton.addEventListener('click', updateCoffees);
+
+
+>>>>>>> e494bfadee3e6fd4eced81c7e02f3acd51f02703
